@@ -6,22 +6,28 @@ $(document).ready(function(){
 
     var title = $('.text-entry').val();
     var author = $('.text-author').val(); 
-    var bookInfo = title + ",  " + author;
-    //bookInfo.push(title, author);
+    var bookInfo = [];
+    bookInfo.push(title, author);
+   
+   ;
     //localStorage.bookInfo += JSON.stringify({ "bookTitle": title, "bookAuthor": author});
 
+    $('.list-display-field').each(function(index){
+      $(this).append("<td>" + bookInfo[0] + ", " + bookInfo[1]+ "</td>");
+      console.log(bookInfo[index])
+   });
+
+    
+   
     localStorage.setItem('formInputValues', bookInfo);
     var myItemInStorage = localStorage.getItem('formInputValues');
     // console.log('myItemInStorage', myItemInStorage);
 
     // display the value here
-    $('.list-display-field').text(myItemInStorage); // ??
+   //$('.list-display-field').append(myItemInStorage); // ??
 
   });
 
-  // need to be able to add multiple vals to display field
-  // try appending myItemInStorage to display field
-  // could try setting myIS to an array --> have a func that iterates & pushes 
 
   // delete from local storage when delete button clicked
   $('.btn-delete').on('click', function(){
@@ -30,14 +36,10 @@ $(document).ready(function(){
 
 });
 
-$("#btn").click(function () {
 
-        var principal = $("#amount").val();
-        var interest = $("#interest").val();
-        var years = $("#period").val();
-        var item = [];
-       item.push(principal,interest,years);
-       localStorage.item += JSON.stringify({ "principalAmount": principal, "interestAmount": interest, "Period": years });
+ // need to be able to add multiple vals to display field
+ // try appending myItemInStorage to display field
 
 
-    });
+
+
