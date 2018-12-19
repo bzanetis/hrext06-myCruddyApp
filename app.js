@@ -1,11 +1,13 @@
 $(document).ready(function(){
   console.log('jQuery loaded');
-    
+     
+   
 
   
 
   // write to local storage from input when button save clicked
   $('.btn-submit').on('click', function(){
+    
     var bookObj = new Object();
     var title = $('.text-entry').val(); // change to title val
     bookObj.title = title;
@@ -48,6 +50,7 @@ $(document).ready(function(){
     })
 
     $('.list-display-field').on("click", "td", function() {
+      $(this).css("color", "rgb(99, 148, 226)");
       $(this).wrap("<strike>");
     })
 
