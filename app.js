@@ -3,38 +3,52 @@ $(document).ready(function(){
 
   // write to local storage from input when button save clicked
   $('.btn-submit').on('click', function(){
-
-    var title = $('.text-entry').val();
+    var bookObj = new Object();
+    var title = $('.text-entry').val(); // change to title val
+    bookObj.title = title;
     var author = $('.text-author').val(); 
-    var bookInfo = [];
-    bookInfo.push(title, author);
+    bookObj.name = author;
+    var myString = JSON.stringify(bookObj);
+    
+    //var bookInfo = [];
+    //bookInfo.push(title, author);
    
-   ;
+  
     //localStorage.bookInfo += JSON.stringify({ "bookTitle": title, "bookAuthor": author});
-
-    $('.list-display-field').each(function(index){
-      $(this).append("<td>" + bookInfo[0] + ", " + bookInfo[1]+ "</td>");
-      console.log(bookInfo[index])
-   });
+   
+  $('.list-display-field').each(function(index){
+      $(this).append("<td>" + bookObj.title  + ", " + bookObj.name + "</td>");
+      //console.log(bookInfo[index])
+  });
+   
 
     
    
-    localStorage.setItem('formInputValues', bookInfo);
-    var myItemInStorage = localStorage.getItem('formInputValues');
+    localStorage.setItem(bookObj.title, myString);
+    var getBook = localStorage.key(localStorage.length - 1);
+    var removeBook = localStorage.getItem(getBook);
+    console.log(removeBook)
+
+
+    $('.btn-delete').on('click', function(){
+      
+    
+    //localStorage.removeItem(bookObj.title)
+    })
+  }); 
+
+    //var myItemInStorage = localStorage.getItem(bookObj.title);
     // console.log('myItemInStorage', myItemInStorage);
+    //var addToTheList = JSON.parse(myItemInStorage);
 
     // display the value here
-   //$('.list-display-field').append(myItemInStorage); // ??
-
-  });
-
+   //$('.list-display-field').append(addToTheList); // ??
+}); 
 
   // delete from local storage when delete button clicked
-  $('.btn-delete').on('click', function(){
-    localStorage.removeItem('formInputValues');
-  });
+  
+ 
 
-});
 
 
  // need to be able to add multiple vals to display field
