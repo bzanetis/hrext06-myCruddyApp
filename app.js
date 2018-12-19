@@ -19,12 +19,7 @@ $(document).ready(function(){
       //console.log(bookInfo[index])
   });
     
-    // if (typeof (Storage) !== 'undefined') {
-    //   let info = {
-    //     textEntry: $title.val(),
-    //     textAuthor: $author.val()
-    //   }
-    //   bookInfo.push(info);
+   
 
     localStorage.setItem(bookObj.title, myString);
     var getBook = localStorage.key(localStorage.length - 1);
@@ -51,6 +46,11 @@ $(document).ready(function(){
     $('.btn-clear-all').on('click', function() {
       localStorage.clear();
     })
+
+    $('.list-display-field').on("click", "td", function() {
+      $(this).wrap("<strike>");
+    })
+
   }); 
 
     //var myItemInStorage = localStorage.getItem(bookObj.title);
@@ -64,11 +64,6 @@ $(document).ready(function(){
   // delete from local storage when delete button clicked
   
  
-
-
-
- // need to be able to add multiple vals to display field
- // try appending myItemInStorage to display field
 
 
 
