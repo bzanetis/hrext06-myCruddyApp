@@ -31,6 +31,11 @@ $(document).ready(function(){
 
 
     $('.btn-delete').on('click', function(){
+      for (var i = 0; i < localStorage.length; i++) {
+        var titleToRemove = localStorage.key(i);
+        var bookToRemove = localStorage.removeItem(titleToRemove);
+        
+      }
       
     
     //localStorage.removeItem(bookObj.title)
