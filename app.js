@@ -1,27 +1,27 @@
 $(document).ready(function(){
   console.log('jQuery loaded');
-     
-   
 
-  
+
+
+
 
   // write to local storage from input when button save clicked
   $('.btn-submit').on('click', function(){
-    
+
     var bookObj = new Object();
     var title = $('.text-entry').val(); // change to title val
     bookObj.title = title;
-    var author = $('.text-author').val(); 
+    var author = $('.text-author').val();
     bookObj.name = author;
     var myString = JSON.stringify(bookObj);
 
-    
+
     $('.list-display-field').each(function(index){
       $(this).append("<td>" + bookObj.title  + ", " + bookObj.name + "</td>");
       //console.log(bookInfo[index])
   });
-    
-   
+
+
 
     localStorage.setItem(bookObj.title, myString);
     var getBook = localStorage.key(localStorage.length - 1);
@@ -32,7 +32,7 @@ $(document).ready(function(){
 
   //   $('.list-display-field').text(myItemInStorage);
   // });
-   
+
 
     $('.btn-delete').on('click', function(){
 
@@ -50,11 +50,14 @@ $(document).ready(function(){
     })
 
     $('.list-display-field').on("click", "td", function() {
-      $(this).css("color", "rgb(99, 148, 226)");
+      $(this).css({"color": "rgb(99, 148, 226)", "position": "center"});
+    })
+
+    $('.list-display-field').on("dblclick", "td", function() {
       $(this).wrap("<strike>");
     })
 
-  }); 
+  });
 
     //var myItemInStorage = localStorage.getItem(bookObj.title);
     // console.log('myItemInStorage', myItemInStorage);
@@ -65,8 +68,8 @@ $(document).ready(function(){
 
 
   // delete from local storage when delete button clicked
-  
- 
+
+
 
 
 
