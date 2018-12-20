@@ -22,7 +22,8 @@ Create Read Update Delete using localStorage with JS, HTML and CSS
 
 ### Next Sprint (what are we trying to code)
 Examples: Replace with your own.
-- [ ] add a strike through capability
+- [x] add a strike through capability
+- [x] change text color on strikethrough
 - [ ] add a stars icon rating system
 - [ ] Read from yelp api to get a nearby book seller location
 
