@@ -50,7 +50,7 @@ $(document).ready(function(){
     })
 
     $('.list-display-field').on("click", "td", function() {
-      $(this).css({"color": "rgb(99, 148, 226)", "position": "center"});
+      $(this).css({"color": "rgb(11, 133, 226)", "position": "center"});
     })
 
     $('.list-display-field').on("dblclick", "td", function() {

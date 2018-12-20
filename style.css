@@ -1,8 +1,77 @@
 
 
+
+body {
+    border: 4px double #1C6EA4;
+
+}
+
+
+
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 30px;
+    letter-spacing: -1.2px
+    word-spacing: 1px;
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
 .list-display-field {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 400;
+    font-size: 19px;
+
+
 }
+
+.btn-container {
+    border: 2px;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.btn-submit {
+    color: rgb(255, 255, 255); font-size: 10px; line-height: 10px; padding: 4px; border-radius: 7px; font-family: Georgia, serif;
+    font-weight: normal; text-decoration: none; font-style: normal; font-variant: normal; text-transform: none; background-image:
+  linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%); box-shadow: rgb(0, 0, 0) 2px 2px 8px
+   2px; border: 2px solid rgb(28, 110, 164); display: inline-block;}
+.btn-submit:hover {
+    background: #1C6EA4; }
+.btn-submit:active {
+    background: #144E75; }
+
+
+.btn-delete {
+    color: rgb(255, 255, 255); font-size: 10px; line-height: 10px; padding: 4px; border-radius: 7px; font-family: Georgia, serif;
+    font-weight: normal; text-decoration: none; font-style: normal; font-variant: normal; text-transform: none; background-image:
+    linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%); box-shadow: rgb(0, 0, 0) 2px 2px
+    8px 2px; border: 2px solid rgb(28, 110, 164); display: inline-block;}
+.btn-delete:hover {
+    background: #1C6EA4; }
+.btn-delete:active {
+    background: #144E75; }
+
+
+.btn-clear-all {
+    color: rgb(255, 255, 255); font-size: 10px; line-height: 10px; padding: 4px; border-radius: 7px; font-family: Georgia, serif;
+    font-weight: normal; text-decoration: none; font-style: normal; font-variant: normal; text-transform: none; background-image:
+    linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%); box-shadow: rgb(0, 0, 0) 2px 2px
+    8px 2px; border: 2px solid rgb(28, 110, 164); display: inline-block;}
+.btn-clear-all:hover {
+    background: #1C6EA4; }
+.btn-clear-all:active {
+    background: #144E75; }
+
+
